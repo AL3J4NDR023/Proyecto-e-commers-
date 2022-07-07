@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b015b12a73.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/register.css">
+    <title>Registro</title>
+</head>
+<body>
+
+    <%- include('partials/header') %> 
+
+    <main>
+        <h2>Formulario de registro</h2>
+        <form action="/user/register" method="post">
+            <div class="input-contenedor">
+                <input type="text" name="nombre" placeholder="Nombre completo">
+                <input type="text" name="apellido" placeholder="Apellido">
+                <input type="email" name="email" placeholder="E-mail">
+                <div class="country">
+                    <select name="pais" id="">
+                        <option value="">Elige un país</option>
+                    </select>
+                </div>
+                <!--<div class="avatar">-->
+                <input type="file" name="avatar" accept="" multiple>
+                <!--</div>-->
+                <input type="password" name="clave" placeholder="Intrese una contraseña" minlength="8" maxlength="10">
+                <input type="password" name="comf-clave" placeholder="Comfirmar contraseña" minlength="8" maxlength="10">
+                <div class="btn">
+                    <input type="submit" value="Enviar">
+                </div>
+                <p>Si posee alguna cuenta, puede <a href="/users/login">iniciar sesión</a> directamente sin necesidad de registrar una nueva</p>
+            </div>
+        </form>
+    </main>
+
+    <!-- footer -->
+    <%- include('partials/footer') %>
+    <!-- /footer -->
+</body>
+</html>

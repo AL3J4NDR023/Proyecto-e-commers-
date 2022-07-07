@@ -1,0 +1,367 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+
+/* NORMALIZACIÓN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* VARIABLES */
+
+:root {
+    /* colores */
+    --amarillo: #eac926;
+    --azul: #03264c;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+    --negro: #000000;
+    --blanco: #ffffff;
+    --azul-claro: #2CA596;
+    --verde-claro: #ddf396;
+    --verde-fuerte: #c8ee3d;
+    --rojo: #fe1500;
+    --lemon: #fef800;
+    --cyber-yellow: #fed525;
+    --scarlet: #fe2a00;
+    --honey-yellow: #FEB404;
+    --dark-organge: #FE8603;
+    --text-sm: 1.2em;
+    --text-md: 1.6em;
+    --text-lg: 1.8em;
+    --title-md: 2.4em;
+    /* familias de fuentes */
+    --roboto: "Roboto", sans-serif;
+  }
+
+  body{
+    background-color: var(--lemon)
+  }
+
+  /* ESTILOS COMUNES */
+
+  html {
+    font-size: 62.5%;
+    font-family: var(--roboto);
+}
+
+h2 {
+    padding-top: 21px;
+    text-align: center;
+    font-size: var(--title-md);
+  }
+
+  p {
+    font-size: var(--text-sm);
+  }
+
+
+/* CABECERA */
+
+header{
+    background-color: var(--negro);
+    
+}
+
+/* redes */
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    list-style-type: none;
+    padding: 8px;
+}
+
+.redes ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.redes ul li a {
+    display: block;
+    padding: 0 10px;
+    /* background: var(--negro); */
+    color: var(--blanco);
+    font-size: 30px;
+    width: 47px;
+}
+
+/* top header */
+
+.top-header {
+    display: flex;
+    padding: 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13%;
+}
+
+
+
+/* logo */
+.top-header picture a img {
+    border: 2px black;
+    width: 84px;
+}
+
+/* barra de busqueda */
+
+button,
+input {
+  background-color: white;
+  border: 7px solid white;
+  border-radius: 2px;
+}
+
+/* carrito */
+
+.carrito a i {
+    color: var(--blanco);
+    font-size: 30px;
+}
+
+.carrito a i:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+
+}
+
+/* nav bar */
+
+header nav {
+    display: none;
+}
+
+/* burger menu */
+
+div.burger-menu {
+    text-align: center;
+}
+
+div.burger-menu i {
+    color: var(--blanco);
+    font-size: 40px;
+    /*height: 40px;*/
+    /*width: 40px;*/
+    margin: 10px 0 20px 0;
+    padding: 10px;
+}
+
+div.burger-menu i:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+    border-radius: 10px;
+}
+
+/* banner */
+
+section.banner img {
+    width: 100%;
+}
+
+
+/* main */
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+main form {
+    display: block;
+}
+
+main form div {
+    padding: 50px;
+    padding-top: 30px;
+    display: grid;
+    flex-wrap: wrap;
+    grid-gap: 3px; 
+  }
+
+  .country {
+    padding: 11px;
+    display: flex;
+    border: var(--negro);
+    border-radius: 10px;
+  }
+  
+  main form div input {
+    padding: 11px;  
+    display: flex;
+    border: var(--negro);
+    border-radius: 10px;  
+  }
+
+  div.coutry{
+    display: flex;
+    flex-wrap: wrap;
+    padding:1px;
+  }
+
+  div.btn {
+    display: flex;
+    justify-content: center;
+  }
+  
+  div.btn input{
+    background-color: var(--rojo);
+    transition: background 0.5s ease;
+    cursor: pointer; 
+    padding: 14px 102px;
+  }
+
+  div .btn input:hover{
+    background-color: var(--dark-organge);
+    color: var(--blanco); 
+  }
+
+/* footer */
+
+footer {
+    background-color: var(--negro);
+}
+
+footer section p {
+    padding: 20px;
+    text-align: center;
+}
+
+footer section ul {
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+footer section ul li {
+    text-align: center;
+    color: var(--blanco);
+}
+
+footer section ul li a{
+
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+footer h3 {
+    color: var(--blanco);
+    text-align: center;
+}
+
+footer p {
+    color: var(--blanco);
+}
+
+@media (min-width: 769px) {
+    .top-header {
+        display: flex;
+        padding: 5%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8%;
+        align-items: center;
+    }
+    
+    
+    
+    /* logo */
+    .top-header picture a img {
+        border: 2px black;
+        width: 149px;
+    }
+    
+    /* barra de busqueda */
+    
+    button,
+    input {
+      background-color: white;
+      border: 7px solid white;
+      border-radius: 2px;
+    }
+
+    header form {
+        width: 63%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header form input {
+        
+        width: 100%;
+    }
+    
+    /* carrito */
+    
+    .carrito a i {
+        color: var(--blanco);
+        font-size: 30px;
+    }
+
+    /* nav bar */
+
+    header nav {
+        display: flex;
+        font-size: var(--title-sm);
+        justify-content: space-between;
+        padding: 24px;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        color: var(--blanco);
+        font-size: 20px;
+        
+    }
+
+    header ul {
+        display: flex;
+    }
+
+    header li {
+        margin: 9px;
+    }
+    
+    /* burger menu */
+    
+    div.burger-menu {
+        display: none;
+    }
+
+    /* main */
+
+    main form {
+        padding: 10px 272px 20px;
+    }
+
+    /* footer */
+
+    footer div.info-footer {
+        display: flex;
+        gap: 14%;
+        margin: 0 10px 0 20px;
+        padding-top: 25px;
+    }
+
+    footer div section {
+       align-items: center;
+    }
+
+    footer div section h3 {
+        font-size: 17px;
+    }
+
+    footer div section ul {
+        list-style-type: none;
+        font-size: 15px;
+    }
+
+    footer div section p {
+        font-size: 15px;
+    }
+}

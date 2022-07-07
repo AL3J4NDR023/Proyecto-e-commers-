@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="create">
+        <div class="titulo">
+            <h2 class="products-title">Formulario de creación de productos</h2>
+        </div>
+        <form action="/products">
+            <div class="formulario">
+                <div class="in-forms">
+                    <label for="name" class="form-label">Nombre del producto:</label>
+                    <input type="text" id="name" name="name" placeholder="Ej: pantalla led" class="form-input">
+                </div>
+                <div class="in-forms">
+                    <label for="price" class="form-label">Precio del producto:</label>
+                    <input type="number" name="price" id="price" placeholder="Ej: 10000" class="form-input">
+                </div>
+                <div class="in-forms">
+                    <label for="discount" class="form-label">Descuento:</label>
+                    <input type="number" name="discount" id="discount" placeholder="Ej: 15" class="form-input">
+                </div>
+                <div class="in-forms">
+                    <label for="category" class="form-label">Categoría:</label>
+                    <select name="category" id="category" class="form-input">
+                        <option value="">Elege</option>
+                        <option value="in-sale">En oferta</option>
+						<option value="visited">Últimos agregados</option>
+                    </select>
+                    <div class="form-button">
+                        <label for="description" class="form-label">Imagen:</label>
+                        <input type="file" src="image" alt="image">
+                    </div>
+                    <div class="form-button" >
+                        <label for="description" class="form-label">Descipción:</label>
+                        <textarea name="description" id="description" class="form-input"></textarea>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" class="boton-form">Guardar producto</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
