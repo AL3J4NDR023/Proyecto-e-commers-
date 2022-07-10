@@ -222,6 +222,12 @@ main form div {
     color: var(--blanco); 
   }
 
+  .text-danger {
+    color: var(--rojo);
+    font-size: var(--text-sm);
+    padding: 1px;
+  }
+
 /* footer */
 
 footer {

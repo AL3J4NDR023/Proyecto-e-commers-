@@ -14,21 +14,73 @@
 
     <main>
         <h2>Formulario de registro</h2>
-        <form action="/user/register" method="post">
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
             <div class="input-contenedor">
-                <input type="text" name="nombre" placeholder="Nombre completo">
-                <input type="text" name="apellido" placeholder="Apellido">
-                <input type="email" name="email" placeholder="E-mail">
+                <input 
+                type="text" 
+                name="fullName" 
+                placeholder= "Nombre completo"
+                value="<%= locals.oldData ? oldData.fullName : null %> ">
+                <% if (locals.errors && errors.fullName) { %>
+                    <div class="text-danger">
+                        <%= errors.fullName.msg %> 
+                    </div>
+                <% } %>
+                <!--<input type="text" name="apellido" placeholder="Apellido">
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class="text-danger">
+                        <%= errors.apellido.msg %> 
+                    </div>
+                <% } %>-->
+                <input 
+                type="email" 
+                name="email" 
+                placeholder="E-mail"
+                value="<%= locals.oldData ? oldData.email : null %> ">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
                 <div class="country">
-                    <select name="pais" id="">
+                    <select name="paiss" id="">
                         <option value="">Elige un país</option>
+                        <% let paises = ['Argentina', 'Bolivia', 'Brasil', 'Colombia', 'Chile', 'Ecuador',
+                           'Paraguay', 'Perú', 'Uruguay', 'Venezuela']; 
+                        %>
+                        <% paises.forEach(pais => { %>
+                        <option 
+                            value="<%= pais %> "
+                            <%= locals.oldData && (pais === oldData.paiss) ? 'selected' : null %> 
+                        ><%= pais %> </option>
+                        <% }) %>
                     </select>
+                    <% if (locals.errors && errors.paiss) { %>
+                        <div class="text-danger">
+                            <%= errors.paiss.msg %> 
+                        </div>
+                    <% } %>
                 </div>
                 <!--<div class="avatar">-->
                 <input type="file" name="avatar" accept="" multiple>
+                <% if (locals.errors && errors.avatar) { %>
+                    <div class="text-danger">
+                        <%= errors.avatar.msg %> 
+                    </div>
+                <% } %>
                 <!--</div>-->
-                <input type="password" name="clave" placeholder="Intrese una contraseña" minlength="8" maxlength="10">
-                <input type="password" name="comf-clave" placeholder="Comfirmar contraseña" minlength="8" maxlength="10">
+                <input type="password" name="clave" placeholder="Intrese una contraseña" minlength="4" maxlength="10">
+                <% if (locals.errors && errors.clave) { %>
+                    <div class="text-danger">
+                        <%= errors.clave.msg %> 
+                    </div>
+                <% } %>
+                <input type="password" name="comfir" placeholder="Comfirmar contraseña" minlength="4" maxlength="10">
+                <% if (locals.errors && errors.comfir) { %>
+                    <div class="text-danger">
+                        <%= errors.comfir.msg %> 
+                    </div>
+                <% } %>
                 <div class="btn">
                     <input type="submit" value="Enviar">
                 </div>
