@@ -284,60 +284,59 @@ footer p {
     
     /* barra de busqueda */
     
-    button,
-    input {
-      background-color: white;
-      border: 7px solid white;
-      border-radius: 2px;
-    }
-
-    header form {
-        width: 63%;
-        display: flex;
-        justify-content: center;
-    }
-
-    header form input {
-        
-        width: 100%;
-    }
-    
-    /* carrito */
-    
-    .carrito a i {
-        color: var(--blanco);
-        font-size: 30px;
-    }
-
-    /* nav bar */
-
-    header nav {
-        display: flex;
-        font-size: var(--title-sm);
-        justify-content: space-between;
-        padding: 24px;
-    }
-
-    header ul li a {
-        text-decoration: none;
-        color: var(--blanco);
-        font-size: 20px;
-        
-    }
-
-    header ul {
-        display: flex;
-    }
-
-    header li {
-        margin: 9px;
-    }
-    
-    /* burger menu */
-    
-    div.burger-menu {
-        display: none;
-    }
+    .search {
+        background-color: white;
+        border: 7px solid white;
+        border-radius: 2px;
+      }
+  
+      .form {
+          width: 63%;
+          display: flex;
+          justify-content: center;
+      }
+  
+      header form input {
+          
+          width: 100%;
+      }
+      
+      /* carrito */
+      
+      .carrito a i {
+          color: var(--blanco);
+          font-size: 30px;
+      }
+  
+      /* nav bar */
+  
+      .nav-bar {
+          display: flex;
+          font-size: var(--title-sm);
+          justify-content: space-between;
+          padding: 0px 80px 30px 53px;
+      }
+  
+      header ul li a {
+          text-decoration: none;
+          color: var(--blanco);
+          font-size: 20px;
+          
+      }
+  
+      header ul {
+          display: flex;
+      }
+  
+      header li {
+          margin: 9px;
+      }
+      
+      /* burger menu */
+      
+      .burger-menu {
+          display: none;
+      }
 
     /* main */
 

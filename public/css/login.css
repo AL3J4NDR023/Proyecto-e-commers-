@@ -212,6 +212,33 @@ main form div{
     color: var(--blanco); 
   }
 
+  .text-danger {
+    color: var(--rojo);
+    font-size: var(--text-sm);
+    padding: 1px;
+  }
+
+  .remenber {
+    width: 300px;
+    margin: 0%;
+    padding: 0%;
+    display: block;
+}
+
+.remenber input {
+    padding: 10px;
+    width: 38%;
+    border: var(--gris-claro);
+    border-radius: 10px;
+}
+
+.remenber p {
+    font-size: var(--text-sm);
+    
+    width: 40%;
+    padding-bottom: 10%;
+}
+
 /* footer */
 
 footer {
@@ -270,62 +297,66 @@ footer p {
     
     /* barra de busqueda */
     
-    button,
-    input {
-      background-color: white;
-      border: 7px solid white;
-      border-radius: 2px;
-    }
-
-    header form {
-        width: 63%;
-        display: flex;
-        justify-content: center;
-    }
-
-    header form input {
-        
-        width: 100%;
-    }
-    
-    /* carrito */
-    
-    .carrito a i {
-        color: var(--blanco);
-        font-size: 30px;
-    }
-
-    /* nav bar */
-
-    header nav {
-        display: flex;
-        font-size: var(--title-sm);
-        justify-content: space-between;
-        padding: 24px;
-    }
-
-    header ul li a {
-        text-decoration: none;
-        color: var(--blanco);
-        font-size: 20px;
-        
-    }
-
-    header ul {
-        display: flex;
-    }
-
-    header li {
-        margin: 9px;
-    }
-    
-    /* burger menu */
-    
-    div.burger-menu {
-        display: none;
-    }
+    .search {
+        background-color: white;
+        border: 7px solid white;
+        border-radius: 2px;
+      }
+  
+      .form {
+          width: 63%;
+          display: flex;
+          justify-content: center;
+      }
+  
+      header form input {
+          
+          width: 100%;
+      }
+      
+      /* carrito */
+      
+      .carrito a i {
+          color: var(--blanco);
+          font-size: 30px;
+      }
+  
+      /* nav bar */
+  
+      .nav-bar {
+          display: flex;
+          font-size: var(--title-sm);
+          justify-content: space-between;
+          padding: 0px 80px 30px 53px;
+      }
+  
+      header ul li a {
+          text-decoration: none;
+          color: var(--blanco);
+          font-size: 20px;
+          
+      }
+  
+      header ul {
+          display: flex;
+      }
+  
+      header li {
+          margin: 9px;
+      }
+      
+      /* burger menu */
+      
+      .burger-menu {
+          display: none;
+      }
 
     /* main */
+
+    /*main form {
+        padding: 10px 272px 20px;
+    }*/
+    
 
     main form div{
         display: flex;
@@ -334,6 +365,32 @@ footer p {
         grid-gap: 40px;
         padding: 30px 150px 0px 150px;
       }
+
+      .text-danger {
+        color: var(--rojo);
+        font-size: var(--text-sm);
+        padding: 0px 469px 0px 2px;
+      }
+
+      .remenber {
+        width: 300px;
+        margin: -3%;
+        padding: 0%;
+    }
+    
+    .remenber input {
+        padding: 10px;
+        width: 38%;
+        border: var(--gris-claro);
+        border-radius: 10px;
+    }
+    
+    .remenber p {
+        font-size: var(--text-sm);
+        
+        width: 40%;
+        padding-bottom: 10%;
+    }
 
     /* footer */
 

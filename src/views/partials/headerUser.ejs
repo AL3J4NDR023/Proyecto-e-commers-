@@ -28,7 +28,7 @@
         </picture>
         <form class="form" action="#" method="get">
             <input type="text" name="busqueda" placeholder="Buscar">
-            <button class="search" type="submit">
+            <button type="submit">
                 <i class="fas fa-search"></i>
             </button>
         </form>
@@ -38,13 +38,8 @@
             </a>
         </div>
     </div>
-    <div class="burger-menu">
-        <button class="burger">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </div>
     <!--nav bar-->
-    <nav class="nav-bar">
+    <nav>
         <ul>
             <li>
                 <a href="/">Inicio</a>
@@ -62,29 +57,17 @@
             </li>
         </ul>
         <ul>
-            <% if (locals.isLogged) { %>
-                <li>
-                <a href="#">
-                    <img src="../img/avatars/<%= locals.userLogged.avatar %> " width="40" style="border-radius: 100%;">
-                    <%= locals.userLogged.fullName%> 
+            <li>
+                <a href="/users/profile">perfil
+                    <i></i>
                 </a>
-                <ul>
-                    <li>
-                        <a href="/users/profile">Mi perfil</a>
-                    </li>
-                    <li>
-                        <a href="/users/logout">Cerrar sección</a>
-                    </li>
-                </ul>
-                </li>
-            <% } else { %>
-                <li>
-            <a href="/users/register">Crear cuenta</a>
-                </li>
-                <li>
-            <a href="/users/login">Ingresar</a>
-                </li>
-            <% } %> 
+            </li>
+            <!--<li>
+                <a href="/users/login">Ingresar</a>
+            </li>-->
         </ul>
     </nav>
+    <div class="burger-menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 </header>

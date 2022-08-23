@@ -1,0 +1,18 @@
+[
+ {
+  "id": 1,
+  "fullName": " Alejo",
+  "email": "alejo@gmail.com",
+  "paiss": "Bolivia ",
+  "clave": "$2a$10$sT.r.aUuE92zH3NOHp4ii.sPgm2qusmI/fISrTIBmOr3ALgj.S3e.",
+  "avatar": "1658277873014_img.jpg"
+ },
+ {
+  "id": 2,
+  "fullName": " Alejolondo",
+  "email": "alejo@gmail.co",
+  "paiss": "Perú ",
+  "clave": "$2a$10$cQ3PO6mMkEM0.z/uSL54kuC1BjGDsgYs9n9C2ZAWi0w7..aplFD3y",
+  "avatar": "1658359073475_img.jpg"
+ }
+]

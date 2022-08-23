@@ -2,10 +2,11 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 const logger = require('morgan');
-//const multer = require('multer');
-
+const multer = require('multer');
+const session = require('express-session');
+const userLoggedMiddleware = require('./src/middleware/userLoggedMiddleware');
 
 // ************ express() ************
 const app = express();
@@ -14,9 +15,14 @@ const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './public')));
-
+app.use(session({
+  secret: 'Alejo',
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(cookies());
+app.use(userLoggedMiddleware);
 // ************ Template Engine ************
 app.set('views', path.join(__dirname, 'src/views')); // Define la ubicación de la carpeta de las Vistas
 app.set('view engine', 'ejs');
@@ -24,8 +30,7 @@ app.set('view engine', 'ejs');
 // ************ Route System require and use() ************
 const mainrouter = require('./src/routes/mainrouter');
 //const productsRouter = require('./src/routes/Products')
-const usersRouter = require('./src/routes/users');
-const multer = require('multer');
+const usersRouter = require('./src/routes/usersRouter');
 
 app.use('/', mainrouter);
 //app.use('/products', productsRouter);

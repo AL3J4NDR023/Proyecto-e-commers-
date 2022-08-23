@@ -1,2 +1,5 @@
 /* IMPORTS */
-@import url('./home')
+@import url('./home');
+@import url('./index');
+@import url('./login');
+@import url('./register');

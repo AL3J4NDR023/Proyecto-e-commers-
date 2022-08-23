@@ -5,17 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b015b12a73.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Iniciar sesión</title>
 </head>
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <form action="/" method="post">
+        <form action="/users/login" method="post">
             <h2>Acceder a la cuenta</h2>
             <div>
-                <input type="email"name="email" placeholder="E-mail">
-                <input type="password" name="pass" placeholder="Contraseña"required>
+                <input type="email "name="email" placeholder="E-mail">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+                <input type="password" name="clave" placeholder="Contraseña">
+                <div class="remenber">
+                    <input type="checkbox" name="remenber"><p>Recordar usuario</p>
+                </div>
                 <div class="btn">
                     <input type="submit" value="iniciar sesión">
                 </div>
